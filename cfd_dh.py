@@ -19,7 +19,7 @@ cfd_offset_time = 0.01
 
 # 基础配置勿动
 cfd_start_dist = None
-cfd_url = "https://wq.jd.com/jxbfd/user/ExchangePrize?strZone=jxbfd&bizCode=jxbfd&source=jxbfd&dwEnv=4&_cfd_t=1638501821589&ptag=139254.28.26&dwType=3&dwLvl=1&ddwPaperMoney=100000&strPoolName=jxcfd2_exchange_hb_202112&strPgtimestamp=&strPhoneID=&strPgUUNum=&_stk=_cfd_t%2CbizCode%2CddwPaperMoney%2CdwEnv%2CdwLvl%2CdwType%2Cptag%2Csource%2CstrPgUUNum%2CstrPgtimestamp%2CstrPhoneID%2CstrPoolName%2CstrZone&_ste=1&h5st=20211203112341589%3B5624054658696163%3B10032%3Btk01wcfb11ce030nXwVtxFiVx1njFlIiZFrJzYanM9NPvLx90Q1LmUN5yxgZK3r11ZmOzgo%2B3ZnOr62Upv7enih0YljV%3Bb3aa8fe40a1bdce343641d37d1be89a971b3144ec7d6808be91f5120f82a0b96&_=1638501821591&sceneval=2&g_login_type=1&callback=jsonpCBKBB&g_ty=ls"
+cfd_url = "https://m.jingxi.com/jxbfd/user/ExchangePrize?strZone=jxbfd&bizCode=jxbfd&source=jxbfd&dwEnv=7&_cfd_t=1638537224979&ptag=7155.9.47&dwType=3&dwLvl=1&ddwPaperMoney=100000&strPoolName=jxcfd2_exchange_hb_202112&strPgtimestamp=1638537224900&strPhoneID=e0d77f0905bffb0ef35ed5e108e1d96d88115814&strPgUUNum=51a7d694d329cd54fafde2fec0a1e7b2&_stk=_cfd_t%2CbizCode%2CddwPaperMoney%2CdwEnv%2CdwLvl%2CdwType%2Cptag%2Csource%2CstrPgUUNum%2CstrPgtimestamp%2CstrPhoneID%2CstrPoolName%2CstrZone&_ste=1&h5st=20211203211344980%3B6326065138416163%3B10032%3Btk01w64641ab730nt2S40l4UxJJQQ54%2BgajV7QcTgxYBAjaj8O5EqJ872fnE8a3tKwmZA63edDFotDUQGKHMvY6LhaGR%3Baa1f6072c37126eec7554dca291f49e801bba558eb12ddcedf9c4cfe38a4bc40&_=1638537224981&sceneval=2&g_login_type=1&callback=jsonpCBKO&g_ty=ls"
 pin = "null"
 u_ck_list = []
 pattern_pin = re.compile(r'pt_pin=([\w\W]*?);')
@@ -109,14 +109,14 @@ if __name__ == '__main__':
         print("未读取到CFD_COOKIE,程序强制结束")
         exit()
     headers = {
-        'Host': 'wq.jd.com',
-        'Accept': '*/*',
-        'Connection': 'keep-alive',
+        "Host": "m.jingxi.com",
+        "Accept": "*/*",
+        "Connection": "keep-alive",
         'Cookie': cookie['value'],
-        'User-Agent': get_ua(),
-        'Accept-Language': 'zh-CN,zh-Hans;q=0.9',
-        'Referer': 'https://wqs.jd.com/',
-        'Accept-Encoding': 'gzip, deflate, br'
+        "User-Agent": "jdpingou;iPhone;5.11.0;15.1.1;e0d77f0905bffb0ef35ed5e108e1d96d88115814;network/wifi;model/iPhone13,2;appBuild/100755;ADID/;supportApplePay/1;hasUPPay/0;pushNoticeIsOpen/1;hasOCPay/0;supportBestPay/0;session/22;pap/JA2019_3111789;brand/apple;supportJDSHWK/1;Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
+        "Referer": "https://st.jingxi.com/",
+        "Accept-Encoding": "gzip, deflate, br"
     }
     u_start_time = float(int(time.time()) + float(cfd_start_time))
     print("预计发送时间为[{}]".format(datetime.datetime.utcfromtimestamp(u_start_time).strftime("%M:%S.%f")))
